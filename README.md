@@ -12,7 +12,7 @@ Welcome to visit: [Meet](https://AndersonTsaiTW.github.io/cf_meet)
   2. (2.2)Given the frame of the event has expanded; When the user clicks it again; the frame of the event will return to a simple version again.
 * As a user, I should be able to specify the Number of events, so that I know how many events I am interested in and focus on.
   1. (3.1)Given user hasn’t searched for any city; When the user opens the app; Then the user should see the total number of events.
-  2. (3.2)Given user was typing “Berlin” in the city textbox; When the list of suggested cities is showing; Then the user should see the total number of events in Berlin.
+  2. (3.2)Given user was typing a specific number in a textbox; When the list of suggested cities is showing; Then the user should see the specific number of events.
 * As a user, I should be able to use the App when offline, so that I can access and interact with the event information at any time whether I have internet or not.
   1. (4.1)Given user has turned off their internet; When the user opens the app; Then the app can run normally.
 * As a user, I should be able to add an app shortcut to the home screen, so that I can quickly access the app.
