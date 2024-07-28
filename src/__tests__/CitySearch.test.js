@@ -11,18 +11,18 @@ describe('<CitySearch /> component', () => {
     CitySearchComponent = render(<CitySearch />);
   });
 
-  test('renders text input', () => {
+  test('#1.1 unit: renders text input', () => {
     const cityTextBox = CitySearchComponent.queryByRole('textbox');
     expect(cityTextBox).toBeInTheDocument();
     expect(cityTextBox).toHaveClass('city');
   });
 
-  test('suggestions list is hidden by default', () => {
+  test('#1.1 unit: suggestions list is hidden by default', () => {
     const suggestionList = CitySearchComponent.queryByRole('list');
     expect(suggestionList).not.toBeInTheDocument();
   });
 
-  test('renders a list of suggestions when city textbox gains focus', async () => {
+  test('#1.2 unit: renders a list of suggestions when city textbox gains focus', async () => {
     const user = userEvent.setup();
     const cityTextBox = CitySearchComponent.queryByRole('textbox');
     await user.click(cityTextBox);
@@ -31,7 +31,7 @@ describe('<CitySearch /> component', () => {
     expect(suggestionList).toHaveClass('suggestions');
   });
 
-  test('updates list of suggestions correctly when user types in city textbox', async () => {
+  test('#1.2 unit: updates list of suggestions correctly when user types in city textbox', async () => {
     const user = userEvent.setup();
     const allEvents = await getEvents();
     const allLocations = extractLocations(allEvents);
@@ -54,7 +54,7 @@ describe('<CitySearch /> component', () => {
     }
   });
 
-  test('renders the suggestion text in the textbox upon clicking on the suggestion', async () => {
+  test('#1.3 unit: renders the suggestion text in the textbox upon clicking on the suggestion', async () => {
     const user = userEvent.setup();
     const allEvents = await getEvents();
     const allLocations = extractLocations(allEvents);

@@ -12,11 +12,11 @@ describe('<EventList /> component', () => {
   })
 
 
-  test('has an element with "list" role', () => {
+  test('#1.1 unit: has an element with "list" role', () => {
     expect(EventListComponent.queryByRole("list")).toBeInTheDocument();
   });
 
-  test('renders correct number of events', async () => {
+  test('#1.1 unit: renders correct number of events', async () => {
     // because this time it need to render an EventList within 4 events
     // so it is rerender here
     const allEvents = await getEvents();

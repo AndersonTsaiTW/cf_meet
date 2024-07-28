@@ -13,17 +13,17 @@ describe('<NumberOfEvents /> component', () => {
     user = userEvent.setup(); // Setup userEvent for simulating user interactions
   });
 
-  test('#3.1 contains a textbox element', () => {
+  test('#3.1 unit: contains a textbox element', () => {
     // Assert that there is an input element with the textbox role
     expect(NumberOfEventsComponent.getByRole('textbox')).toBeInTheDocument();
   });
 
-  test('#3.1 default value of the input field is 32', () => {
+  test('#3.1 unit: default value of the input field is 32', () => {
     // Assert that the textbox has a default value of 32
     expect(NumberOfEventsComponent.getByRole('textbox').value).toBe('32');
   });
 
-  test('#3.2 value of the textbox changes when a user types in it', async () => {
+  test('#3.2 unit: value of the textbox changes when a user types in it', async () => {
     // Retrieve the textbox element
     const textbox = NumberOfEventsComponent.getByRole('textbox');
     // I will suggest the code in the commend below
