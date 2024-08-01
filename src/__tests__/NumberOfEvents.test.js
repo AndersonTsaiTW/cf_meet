@@ -1,7 +1,9 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, within, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import NumberOfEvents from '../components/NumberOfEvents';
+
+import App from "../App";
 
 describe('<NumberOfEvents /> component', () => {
   let NumberOfEventsComponent;
@@ -9,7 +11,7 @@ describe('<NumberOfEvents /> component', () => {
 
   beforeEach(() => {
     // Render component before each test
-    NumberOfEventsComponent = render(<NumberOfEvents />);
+    NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => { }} />);
     user = userEvent.setup(); // Setup userEvent for simulating user interactions
   });
 
@@ -33,3 +35,24 @@ describe('<NumberOfEvents /> component', () => {
     expect(textbox.value).toBe('10');
   });
 });
+
+describe('<NumberOfEvents /> Integration', () => {
+  let user;
+
+  beforeEach(() => {
+    // Render component before each test
+    user = userEvent.setup(); // Setup userEvent for simulating user interactions
+  });
+
+  test('#3.2: changes the value in the textbox will change the number of events in the list', async () => {
+    const AppComponent = render(<App />);
+    const NumberOfEventsInput = AppComponent.container.querySelector('#number-of-events-input');
+    await user.type(NumberOfEventsInput, "{backspace}{backspace}10");
+
+    await waitFor(() => {
+      const EventListItems = AppComponent.queryAllByRole('listitem');
+      expect(EventListItems.length).toBe(10);
+    });
+  }
+  )
+})
