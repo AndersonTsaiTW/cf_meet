@@ -44,7 +44,7 @@ describe('<NumberOfEvents /> Integration', () => {
     user = userEvent.setup(); // Setup userEvent for simulating user interactions
   });
 
-  test('#3.2: changes the value in the textbox will change the number of events in the list', async () => {
+  test('#3.2 integration: changes the value in the textbox will change the number of events in the list', async () => {
     const AppComponent = render(<App />);
     const NumberOfEventsInput = AppComponent.container.querySelector('#number-of-events-input');
     await user.type(NumberOfEventsInput, "{backspace}{backspace}10");
@@ -53,6 +53,5 @@ describe('<NumberOfEvents /> Integration', () => {
       const EventListItems = AppComponent.queryAllByRole('listitem');
       expect(EventListItems.length).toBe(10);
     });
-  }
-  )
+  });
 })
