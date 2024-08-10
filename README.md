@@ -9,8 +9,8 @@ Welcome to visit: [Meet](https://AndersonTsaiTW.github.io/cf_meet)
   3. (1.3)Given user was typing “Berlin” in the city textbox AND the list of suggested cities is showing; When the user selects a city (e.g., “Berlin, Germany”) from the list; Then their city should be changed to that city (i.e., “Berlin, Germany”) AND the user should receive a list of upcoming events in that city.
 * As a user, I should be able to show/hide event details, so that I can view more details when I need to or hide them to keep my screen uncluttered.
   1. (2.1)Given user doesn't click the button to show details; When the user see the event; Then the details of the event is hidden.
-  2. (2.2)Given user has seen the events(e.g, "Firework for Canada day"); When the user clicks the event; Then the frame of the event can expand and show more details.
-  3. (2.3)Given the frame of the event has expanded; When the user clicks it again; the frame of the event will return to a simple version again.
+  2. (2.2)Given user has seen the events(e.g, "Firework for Canada day"); When the user clicks the button on an event; Then the frame of the event can expand and show more details.
+  3. (2.3)Given the frame of the event has expanded; When the user clicks it again; Then the frame of the event will return to a simple version again.
 * As a user, I should be able to specify the Number of events, so that I know how many events I am interested in and focus on.
   1. (3.1)Given user hasn’t searched for any city; When the user opens the app; Then the user should see the total number of events.
   2. (3.2)Given user was typing a specific number in a textbox; When the list of suggested cities is showing; Then the user should see the specific number of events.
