@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-describe('#1 End-to-end: show/hide event details', () => {
+describe('#1 End-to-end: Filter events by city', () => {
   let browser;
   let page;
   beforeAll(async () => {
