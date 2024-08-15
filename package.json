@@ -23,6 +23,7 @@
     "@sideway/address": "^5.0.0",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
+    "atatus-spa": "^4.6.1",
     "cf_meet": "file:",
     "chokidar": "^3.6.0",
     "joi": "^17.13.3",
