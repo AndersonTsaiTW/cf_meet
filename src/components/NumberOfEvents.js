@@ -1,14 +1,28 @@
 // src/components/NumberOfEvents.js
 import React, { useState } from 'react';
 
-const NumberOfEvents = ({ setCurrentNOE }) => {
+const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
   // add a state to record the number
   const [numberOfEvents, setNumberOfEvents] = useState(32); // default number is 32
 
   const handleInputChange = (event) => {
+    setNumberOfEvents(event.target.value);
     const value = Number(event.target.value);
-    setNumberOfEvents(value);
-    setCurrentNOE(value); // update currentNOE in App component
+
+    let errorText;
+    if (isNaN(value)) {
+      errorText = "This is Not A Number. Please enter a valid value.";
+
+    } else if (value <= 0) {
+      errorText = "This number needs to be more than zero.";
+
+    } else {
+      errorText = "";
+      setNumberOfEvents(value);
+      setCurrentNOE(value); // update currentNOE in App component
+    }
+    setErrorAlert(errorText);
+
   };
 
   return (

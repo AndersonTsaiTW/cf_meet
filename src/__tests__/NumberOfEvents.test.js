@@ -11,7 +11,9 @@ describe('<NumberOfEvents /> component', () => {
 
   beforeEach(() => {
     // Render component before each test
-    NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => { }} />);
+    NumberOfEventsComponent = render(<NumberOfEvents
+      setCurrentNOE={() => { }}
+      setErrorAlert={() => { }} />);
     user = userEvent.setup(); // Setup userEvent for simulating user interactions
   });
 
