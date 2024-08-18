@@ -11,10 +11,10 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
 
     let errorText;
     if (isNaN(value)) {
-      errorText = "This is Not A Number. Please enter a valid value.";
+      errorText = "Error! This is Not A Number. Please enter a valid value.";
 
     } else if (value <= 0) {
-      errorText = "This number needs to be more than zero.";
+      errorText = "Error! This number needs to be more than zero.";
 
     } else {
       errorText = "";
