@@ -56,4 +56,5 @@ describe('<Event /> component', () => {
     expect(EventComponent.queryByText('show details')).toBeInTheDocument();
     expect(EventComponent.container.querySelector('.description')).not.toBeInTheDocument();
   });
+
 });

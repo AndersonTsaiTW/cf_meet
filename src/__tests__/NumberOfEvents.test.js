@@ -30,9 +30,6 @@ describe('<NumberOfEvents /> component', () => {
   test('#3.2 unit: value of the textbox changes when a user types in it', async () => {
     // Retrieve the textbox element
     const textbox = NumberOfEventsComponent.getByRole('textbox');
-    // I will suggest the code in the commend below
-    // await user.clear(textbox);
-    // await user.type(textbox, '10');  // Now type '10'
     await user.type(textbox, '{backspace}{backspace}10'); // Clears and types '10'
     expect(textbox.value).toBe('10');
   });

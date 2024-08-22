@@ -6,7 +6,6 @@ import App from '../App';
 import { getEvents } from '../api';
 
 // loadFeature() expects the file path to start from the root of the project.
-// This is why here is not “./filterEventsByCity.feature.”
 const feature = loadFeature('./src/features/filterEventsByCity.feature');
 
 defineFeature(feature, test => {

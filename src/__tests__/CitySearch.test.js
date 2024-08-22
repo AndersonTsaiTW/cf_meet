@@ -86,7 +86,6 @@ describe('<CitySearch /> component', () => {
 
 });
 
-
 describe('<CitySearch /> integration', () => {
   test('#1.3 integration: renders suggestions list when the app is rendered.', async () => {
     const user = userEvent.setup();

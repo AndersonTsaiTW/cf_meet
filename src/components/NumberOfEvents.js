@@ -12,17 +12,14 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
     let errorText;
     if (isNaN(value)) {
       errorText = "Error! This is Not A Number. Please enter a valid value.";
-
     } else if (value <= 0) {
       errorText = "Error! This number needs to be more than zero.";
-
     } else {
       errorText = "";
       setNumberOfEvents(value);
       setCurrentNOE(value); // update currentNOE in App component
     }
     setErrorAlert(errorText);
-
   };
 
   return (

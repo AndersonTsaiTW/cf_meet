@@ -12,7 +12,6 @@ defineFeature(feature, test => {
   test('#2.1 An event element is collapsed by default.', ({ given, when, then }) => {
     given('user doesn\'t click the button to show details', () => {
       // leave this part empty because the user did nothing
-
     });
 
     let EventComponent;
@@ -23,7 +22,6 @@ defineFeature(feature, test => {
       EventComponent = render(<Event event={event} />);
 
     });
-
 
     then('the details of the event is hidden', () => {
       expect(EventComponent.queryByText(allEvents[0].description)).not.toBeInTheDocument();
@@ -47,7 +45,6 @@ defineFeature(feature, test => {
         const showDetails = EventComponent.queryByText('show details');
         await user.click(showDetails);
       });
-
 
       then('the frame of the event can expand and show more details.', () => {
         expect(EventComponent.queryByText('hide details')).toBeInTheDocument();
@@ -82,6 +79,5 @@ defineFeature(feature, test => {
       });
     });
   });
-
 
 });

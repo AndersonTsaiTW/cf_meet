@@ -9,7 +9,7 @@ describe('#1 End-to-end: Filter events by city', () => {
       { timeout: 0 }
     );
 
-    // Method 2
+    // Method 2: Use Method 2 can see the process on the screen
 
     // browser = await puppeteer.launch({
     //   headless: false,
@@ -71,27 +71,16 @@ describe('#1 End-to-end: Filter events by city', () => {
       expect(locationText).toContain('Berlin, Germany');
     }
   });
-
-
 });
-
 
 describe('#2 End-to-end: show/hide event details', () => {
   let browser;
   let page;
   beforeAll(async () => {
-    // Method 1
     browser = await puppeteer.launch(
       { timeout: 0 }
     );
 
-    // Method 2
-
-    // browser = await puppeteer.launch({
-    //   headless: false,
-    //   slowMo: 250, // slow down by 250ms,
-    //   timeout: 0 // removes any puppeteer/browser timeout limitations (this isn't the same as the timeout of jest)
-    // });
     page = await browser.newPage();
     await page.goto('http://localhost:3000/');
     await page.waitForSelector('.event');
