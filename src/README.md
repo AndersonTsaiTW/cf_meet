@@ -1,4 +1,5 @@
-### User Stories for features
+## User Stories - the identifiers(e.g. 1.1, 1.2) can be used to search the related tests
+
 * As a user, I should be able to filter events by city, so that I can see a list of events taking place in that city.
   1. (1.1)Given user hasn’t searched for any city; When the user opens the app; Then the user should see a list of upcoming events.
   2. (1.2)Given the main page is open; When user starts typing in the city textbox; Then the user should receive a list of cities (suggestions) that match what they’ve typed.
